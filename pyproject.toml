@@ -16,8 +16,13 @@ classifiers = [
 ]
 
 [tool.pixi.project]
-channels = ["conda-forge"]
 platforms = ["win-64", "linux-64", "osx-arm64", "osx-64"]
+channels = [
+	"conda-forge",
+	"https://prefix.dev/pixi-build-backends",
+	"https://prefix.dev/conda-forge",
+]
+preview = ["pixi-build"]
 
 [tool.pixi.pypi-dependencies]
 noaa_ghcn = { path = ".", editable = true }
@@ -39,13 +44,13 @@ pre-commit = "*"
 ruff = "*"
 
 [tool.pixi.environments]
-prod = { features = [], solve-group = "prod" }
-default = { features = ["dev"], solve-group = "prod" }
+default = { features = [], solve-group = "default" }
+dev = { features = ["dev"], solve-group = "default" }
 
 [tool.pixi.tasks]
-lint = { cmd = "ruff check --fix noaa-ghcn/", description = "Lint the code" }
-format = { cmd = "ruff format noaa-ghcn/", description = "Format the code" }
-test = { cmd = "pytest noaa-ghcn/", description = "Run tests" }
+lint = { cmd = "ruff check --fix noaa_ghcn/", description = "Lint the code" }
+format = { cmd = "ruff format noaa_ghcn/", description = "Format the code" }
+test = { cmd = "pytest noaa_ghcn/", description = "Run tests" }
 
 [tool.ruff]
 line-length = 120
@@ -78,3 +83,9 @@ packages = ["noaa-ghcn"]
 
 [tool.hatch.version]
 path = "pyproject.toml"
+
+[tool.pixi.package.build]
+backend = { name = "pixi-build-python", version = "0.1.*" }
+
+[tool.pixi.package.host-dependencies]
+hatchling = "*"
