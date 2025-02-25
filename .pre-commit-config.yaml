@@ -1,0 +1,44 @@
+ci:
+  skip: [sync]
+
+minimum_pre_commit_version: 3.0.4
+
+exclude: (^.pixi/)
+
+repos:
+  - repo: local
+    hooks:
+      - id: ruff
+        name: Ruff lint
+        entry: pixi run lint
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
+        stages: [pre-commit, manual]
+      - id: ruff-format
+        name: Ruff format
+        entry: pixi run format
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
+        stages: [pre-commit, manual]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+  # general checks (see here: https://pre-commit.com/hooks.html)
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-json
+        exclude: .vscode | ^.pixi/
+      - id: check-case-conflict
+      - id: detect-private-key
+      - id: mixed-line-ending
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+      - id: check-toml
+      - id: check-yaml
+      - id: end-of-file-fixer
+  - repo: https://github.com/kynan/nbstripout
+    # nbstripout
+    rev: 0.6.1
+    hooks:
+      - id: nbstripout
