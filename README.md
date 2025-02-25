@@ -1,0 +1,1 @@
+A package to search and retrieve data from the National Oceanic and Atmospheric Administration (NOAA) Global Historical Climatology Network Daily (GHCN-D) [dataset](https://registry.opendata.aws/noaa-ghcn/) hosted on [Amazon AWS S3.](https://noaa-ghcn-pds.s3.amazonaws.com/index.html)
