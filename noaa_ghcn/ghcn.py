@@ -21,7 +21,7 @@ class GHCN:
 		self._region_name = "us-east-1"
 		self._s3 = self._connect_to_s3()
 
-		self._data_dir = Path(__file__).parent.parent / "data"
+		self._data_dir = Path(__file__).parent / "data"
 
 		self._stations_filename = "ghcnd-stations.txt"
 		self._stations_filepath = self._data_dir / self._stations_filename
@@ -157,7 +157,6 @@ class GHCN:
 				if update.lower() == "y":
 					self._download_stations()
 		else:
-			print("No local Station data available, downloading file...")
 			self._download_stations()
 
 	def _download_stations(self):
@@ -179,9 +178,7 @@ class GHCN:
 				if update.lower() == "y":
 					self._download_inventory()
 		else:
-			print("No local Inventory data available, downloading file...")
 			self._download_inventory()
-			print(self._inventory_filepath.exists(), self._inventory_lastmodified)
 
 	def _download_inventory(self):
 		print("Downloading inventory file...")

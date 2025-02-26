@@ -8332,8 +8332,15 @@ packages:
   timestamp: 1723652704997
 - pypi: .
   name: noaa-ghcn
-  version: 0.1.0
-  sha256: 397e140f9320c8495bde2c9f547baa450be7ecdc374a13ee4dc033b6a37b15b0
+  version: 0.2.0
+  sha256: dd7fafe1972ba9d2cc8380eb46fa8e0ba011988bbabae6bdc9ae696bcd5627e6
+  requires_dist:
+  - pandas
+  - geopandas
+  - pyarrow
+  - shapely
+  - tqdm
+  - boto3>=1.36.24,<2
   requires_python: '>=3.10'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/nodeenv-1.9.1-pyhd8ed1ab_1.conda
