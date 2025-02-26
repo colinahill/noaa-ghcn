@@ -1,6 +1,6 @@
 [project]
 name = "noaa-ghcn"
-version = "0.1.0"
+version = "0.2.0"
 description = "A package to retrieve data from the NOAA Global Historical Climatology Network Daily (GHCN-D) dataset on AWS S3."
 authors = [{name = "Colin Hill", email = "colinalastairhill@gmail.com"}]
 readme = "README.md"
@@ -13,6 +13,14 @@ classifiers = [
 	"Programming Language :: Python :: 3.11",
 	"Programming Language :: Python :: 3.12",
 	"Programming Language :: Python :: 3.13",
+]
+dependencies = [
+	"pandas",
+	"geopandas",
+	"pyarrow",
+	"shapely",
+	"tqdm",
+	"boto3>=1.36.24,<2",
 ]
 
 [tool.pixi.project]

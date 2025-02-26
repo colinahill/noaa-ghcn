@@ -4,7 +4,7 @@ SNOW = Snowfall (mm)
 SNWD = Snow depth (mm)
 TMAX = Maximum temperature (degrees C)
 TMIN = Minimum temperature (degrees C)
-	   
+
 The other elements are:
 ACMC = Average cloudiness midnight to midnight from 30-second ceilometer data (percent)
 ACMH = Average cloudiness midnight to midnight from manual observations (percent)
@@ -31,7 +31,7 @@ FRTH = Thickness of frozen ground layer (cm)
 GAHT = Difference between river and gauge height (cm)
 MDEV = Multiday evaporation total (mm; use with DAEV)
 MDPR = Multiday precipitation total (mm; use with DAPR and DWPR, if available)
-MDSF = Multiday snowfall total 
+MDSF = Multiday snowfall total
 MDTN = Multiday minimum temperature (degrees C; use with DATN)
 MDTX = Multiday maximum temperature (tenths of degress C; use with DATX)
 MDWM = Multiday wind movement (km)
@@ -43,7 +43,7 @@ RHAV = Average relative humidity for the day (percent)
 RHMN = Minimum relative humidity for the day (percent)
 RHMX = Maximum relative humidity for the day (percent)
 SN*# = Minimum soil temperature (degrees C)
-	where '*' corresponds to a code for ground cover and '#' corresponds to a code for soil depth.  
+	where '*' corresponds to a code for ground cover and '#' corresponds to a code for soil depth.
 
 	Ground cover codes include the following:
 		0 = unknown
@@ -55,7 +55,7 @@ SN*# = Minimum soil temperature (degrees C)
 		6 = straw multch
 		7 = grass muck
 		8 = bare muck
-	
+
 	Depth codes include the following:
 		1 = 5 cm
 		2 = 10 cm
@@ -64,14 +64,14 @@ SN*# = Minimum soil temperature (degrees C)
 		5 = 100 cm
 		6 = 150 cm
 		7 = 180 cm
-	
-SX*# = Maximum soil temperature (degrees C) where '*' corresponds to a code for ground cover and '#' corresponds to a code for soil depth. 
+
+SX*# = Maximum soil temperature (degrees C) where '*' corresponds to a code for ground cover and '#' corresponds to a code for soil depth.
 See SN*# for ground cover and depth codes.
-TAXN = Average daily temperature computed as (TMAX+TMIN)/2.0 (degrees C) 
+TAXN = Average daily temperature computed as (TMAX+TMIN)/2.0 (degrees C)
 TAVG = Average daily temperature (degrees C)
 	[Note that TAVG from source 'S' corresponds to an average of hourly readings for the period ending at 2400 UTC rather than local midnight or other Local Standard Time according to a specific Met Service's protocol]
 	[For sources other than 'S' TAVG is computed in a variety of ways including traditional fixed hours of the day whereas TAXN is solely computed as (TMAX+TMIN)/2.0]
-THIC = Thickness of ice on water (mm)	
+THIC = Thickness of ice on water (mm)
 TOBS = Temperature at the time of observation (degrees C)
 TSUN = Daily total sunshine (minutes)
 WDF1 = Direction of fastest 1-minute wind (degrees)
@@ -80,7 +80,7 @@ WDF5 = Direction of fastest 5-second wind (degrees)
 WDFG = Direction of peak wind gust (degrees)
 WDFI = Direction of highest instantaneous wind (degrees)
 WDFM = Fastest mile wind direction (degrees)
-WDMV = 24-hour wind movement (km)	   
+WDMV = 24-hour wind movement (km)
 WESD = Water equivalent of snow on the ground (mm)
 WESF = Water equivalent of snowfall (mm)
 WSF1 = Fastest 1-minute wind speed (meters per second)
@@ -93,23 +93,23 @@ WT** = Weather Type where ** has one of the following values:
 		01 = Fog, ice fog, or freezing fog (may include heavy fog)
 		02 = Heavy fog or heaving freezing fog (not always distinquished from fog)
 		03 = Thunder
-		04 = Ice pellets, sleet, snow pellets, or small hail 
+		04 = Ice pellets, sleet, snow pellets, or small hail
 		05 = Hail (may include small hail)
-		06 = Glaze or rime 
+		06 = Glaze or rime
 		07 = Dust, volcanic ash, blowing dust, blowing sand, or blowing obstruction
-		08 = Smoke or haze 
+		08 = Smoke or haze
 		09 = Blowing or drifting snow
-		10 = Tornado, waterspout, or funnel cloud 
+		10 = Tornado, waterspout, or funnel cloud
 		11 = High or damaging winds
 		12 = Blowing spray
 		13 = Mist
 		14 = Drizzle
-		15 = Freezing drizzle 
-		16 = Rain (may include freezing rain, drizzle, and freezing drizzle) 
-		17 = Freezing rain 
+		15 = Freezing drizzle
+		16 = Rain (may include freezing rain, drizzle, and freezing drizzle)
+		17 = Freezing rain
 		18 = Snow, snow pellets, snow grains, or ice crystals
-		19 = Unknown source of precipitation 
-		21 = Ground fog 
+		19 = Unknown source of precipitation
+		21 = Ground fog
 		22 = Ice fog or freezing fog
 
 WV** = Weather in the Vicinity where ** has one of the following values:

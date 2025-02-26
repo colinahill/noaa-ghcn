@@ -2,11 +2,12 @@ name: Publish to Test PyPI
 
 on:
   release:
-    types: [prereleased]
+    types: [released]
   workflow_dispatch:
 
 jobs:
   build:
+    if: 'github.event.prerelease'
     runs-on: ubuntu-latest
     environment: release
     permissions:
