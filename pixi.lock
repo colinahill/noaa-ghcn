@@ -8333,7 +8333,7 @@ packages:
 - pypi: .
   name: noaa-ghcn
   version: 0.1.0
-  sha256: f93dcb65bb1fd47f3fe25803d3ad12a48c9edabccc9f356a8234bff48390c543
+  sha256: 15325141e0b65fc265c13e531618f99daf9451100fc931703f4cfdd179bb27ee
   requires_python: '>=3.10'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/nodeenv-1.9.1-pyhd8ed1ab_1.conda
