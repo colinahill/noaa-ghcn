@@ -2,12 +2,11 @@ name: Publish to PyPI
 
 on:
   release:
-    types: [released]
+    types: [prereleased, released]
   workflow_dispatch:
 
 jobs:
   build:
-    if: '!github.event.prerelease'
     runs-on: ubuntu-latest
     environment: release
     permissions:
@@ -31,5 +30,13 @@ jobs:
         run: pip install hatch
       - name: Build package
         run: hatch build
+      # Publish to Test PyPI (only for pre-releases)
+      - name: Publish to Test PyPI
+        if: github.event.release.prerelease == true
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+      # Publish to PyPI (only for releases)
       - name: Publish to PyPI
+        if: github.event.release.prerelease == false
         uses: pypa/gh-action-pypi-publish@release/v1
