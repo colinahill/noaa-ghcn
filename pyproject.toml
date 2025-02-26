@@ -73,13 +73,14 @@ build-backend = "hatchling.build"
 requires = ["hatchling"]
 
 [tool.hatch.build.targets.sdist]
+include = ["noaa_ghcn"]
 exclude = [
   "/.github",
   "/docs",
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["noaa-ghcn"]
+packages = ["noaa_ghcn"]
 
 [tool.hatch.version]
 path = "pyproject.toml"
