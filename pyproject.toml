@@ -48,9 +48,9 @@ default = { features = [], solve-group = "default" }
 dev = { features = ["dev"], solve-group = "default" }
 
 [tool.pixi.tasks]
-lint = { cmd = "ruff check --fix noaa_ghcn/", description = "Lint the code" }
-format = { cmd = "ruff format noaa_ghcn/", description = "Format the code" }
-test = { cmd = "pytest noaa_ghcn/", description = "Run tests" }
+lint = { cmd = "pixi run -e dev ruff check --fix noaa_ghcn/", description = "Lint the code" }
+format = { cmd = "pixi run -e dev ruff format noaa_ghcn/", description = "Format the code" }
+test = { cmd = "pixi run -e dev pytest noaa_ghcn/", description = "Run tests" }
 
 [tool.ruff]
 line-length = 120
