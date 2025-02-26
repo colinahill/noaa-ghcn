@@ -28,9 +28,7 @@ jobs:
           auth-host: prefix.dev
           auth-token: ${{ secrets.PREFIX_DEV_TOKEN }}
       - name: Install dependencies
-        run: |
-          pixi install -e dev
-          pixi shell
+        run: pixi install -e dev
       - name: Lint and format with Ruff
         run: |
           pixi run lint
