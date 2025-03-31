@@ -8332,8 +8332,8 @@ packages:
   timestamp: 1723652704997
 - pypi: .
   name: noaa-ghcn
-  version: 0.2.0
-  sha256: dd7fafe1972ba9d2cc8380eb46fa8e0ba011988bbabae6bdc9ae696bcd5627e6
+  version: 0.3.0
+  sha256: 73bbaa60a20afda6a6f852d3025004440fb675f8df7e073e8bcc2cb9e9cbc6c2
   requires_dist:
   - pandas
   - geopandas
