@@ -1,6 +1,6 @@
 [project]
 name = "noaa-ghcn"
-version = "0.2.0"
+version = "0.3.0"
 description = "A package to retrieve data from the NOAA Global Historical Climatology Network Daily (GHCN-D) dataset on AWS S3."
 authors = [{name = "Colin Hill", email = "colinalastairhill@gmail.com"}]
 readme = "README.md"
