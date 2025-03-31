@@ -200,8 +200,8 @@ class GHCN:
 		df = pd.read_fwf(
 			self._stations_filepath,
 			header=None,
-			formatting_info=(0, 11, 13, 20, 22, 30, 32, 37, 39, 40, 42, 71, 73, 75, 77, 79, 81, 85),
-			names=["ID", "LATITUDE", "LONGITUDE", "ELEVATION", "NAME", "STATE", "GSN FLAG", "HCN/CRN FLAG", "WMO ID"],
+			colspecs=[(0, 11), (12, 20), (21, 30), (31, 37), (38, 40), (41, 71), (72, 75), (76, 79), (80, 85)],
+			names=["ID", "LATITUDE", "LONGITUDE", "ELEVATION", "STATE", "NAME", "GSN FLAG", "HCN/CRN FLAG", "WMO ID"],
 		)
 		# replace missing elevation values with NaN
 		df["ELEVATION"] = df["ELEVATION"].replace(-999.9, pd.NA)
@@ -211,7 +211,7 @@ class GHCN:
 		df = pd.read_fwf(
 			self._inventory_filepath,
 			header=None,
-			formatting_info=(0, 11, 13, 20, 22, 30, 32, 35, 37, 40, 42, 45),
+			colspecs=[(0, 11), (12, 20), (21, 30), (31, 35), (36, 40), (41, 45)],
 			names=["ID", "LATITUDE", "LONGITUDE", "ELEMENT", "FIRSTYEAR", "LASTYEAR"],
 		)
 		return gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df["LONGITUDE"], df["LATITUDE"]), crs="EPSG:4326")
